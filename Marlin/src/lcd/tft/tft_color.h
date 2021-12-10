@@ -40,6 +40,7 @@
 #define COLOR_DARKGREY        0x4208  // #404040
 #define COLOR_DARKGREY2       0x39E7  // #303030
 #define COLOR_DARK            0x0003  // #000019
+#define COLOR_NVIDEA          0x9FE7  // #a0fc3d																	  
 
 #define COLOR_RED             0xF800  // #FF0000
 #define COLOR_SCARLET         0xF904  // #FF2020
@@ -71,13 +72,15 @@
 #define COLOR_DARK_PURPLE     0x9930  // #992380
 
 #ifndef COLOR_BACKGROUND
-  #define COLOR_BACKGROUND    0x20AC  // #1E156E
+   //#define COLOR_BACKGROUND    0x20AC  // #1E156E
+	#define COLOR_BACKGROUND    0x0000  // #000000
 #endif
 #ifndef COLOR_SELECTION_BG
-  #define COLOR_SELECTION_BG  0x9930  // #992380
+    //#define COLOR_SELECTION_BG    0x9930  // #992380
+	#define COLOR_SELECTION_BG    0x39E7  // #303030
 #endif
 #ifndef COLOR_WEBSITE_URL
-  #define COLOR_WEBSITE_URL   0x03B7  // #0075BD
+  #define COLOR_WEBSITE_URL     0x03B7
 #endif
 
 #ifndef COLOR_INACTIVE
@@ -103,14 +106,14 @@
 #endif
 
 #ifndef COLOR_AXIS_HOMED
-  #define COLOR_AXIS_HOMED        COLOR_WHITE
+  #define COLOR_AXIS_HOMED        COLOR_AQUA
 #endif
 #ifndef COLOR_AXIS_NOT_HOMED
-  #define COLOR_AXIS_NOT_HOMED    COLOR_YELLOW
+  #define COLOR_AXIS_NOT_HOMED    COLOR_SCARLET
 #endif
 
 #ifndef COLOR_RATE_100
-  #define COLOR_RATE_100          COLOR_VIVID_GREEN
+  #define COLOR_RATE_100          COLOR_AQUA
 #endif
 #ifndef COLOR_RATE_ALTERED
   #define COLOR_RATE_ALTERED      COLOR_YELLOW
@@ -121,24 +124,24 @@
 #endif
 
 #ifndef COLOR_PROGRESS_FRAME
-  #define COLOR_PROGRESS_FRAME    COLOR_WHITE
+  #define COLOR_PROGRESS_FRAME    COLOR_AQUA
 #endif
 #ifndef COLOR_PROGRESS_BAR
-  #define COLOR_PROGRESS_BAR      COLOR_BLUE
+  #define COLOR_PROGRESS_BAR      COLOR_AQUA
 #endif
 #ifndef COLOR_PROGRESS_BG
   #define COLOR_PROGRESS_BG       COLOR_BLACK
 #endif
 
 #ifndef COLOR_STATUS_MESSAGE
-  #define COLOR_STATUS_MESSAGE    COLOR_YELLOW
+  #define COLOR_STATUS_MESSAGE    COLOR_SCARLET
 #endif
 
 #ifndef COLOR_CONTROL_ENABLED
-  #define COLOR_CONTROL_ENABLED   COLOR_WHITE
+  #define COLOR_CONTROL_ENABLED   COLOR_AQUA
 #endif
 #ifndef COLOR_CONTROL_DISABLED
-  #define COLOR_CONTROL_DISABLED  COLOR_GREY
+  #define COLOR_CONTROL_DISABLED  COLOR_SCARLET
 #endif
 #ifndef COLOR_CONTROL_CANCEL
   #define COLOR_CONTROL_CANCEL    COLOR_SCARLET
@@ -151,30 +154,31 @@
 #endif
 
 #ifndef COLOR_MENU_TEXT
-  #define COLOR_MENU_TEXT         COLOR_YELLOW
+  #define COLOR_MENU_TEXT         COLOR_AQUA
 #endif
 #ifndef COLOR_MENU_VALUE
-  #define COLOR_MENU_VALUE        COLOR_WHITE
+  #define COLOR_MENU_VALUE        COLOR_AQUA
 #endif
 
 #ifndef COLOR_SLIDER
-  #define COLOR_SLIDER            COLOR_WHITE
+  #define COLOR_SLIDER            COLOR_AQUA
 #endif
 #ifndef COLOR_SLIDER_INACTIVE
   #define COLOR_SLIDER_INACTIVE   COLOR_GREY
 #endif
 
 #ifndef COLOR_UBL
-  #define COLOR_UBL               COLOR_WHITE
+  #define COLOR_UBL               COLOR_AQUA
 #endif
 
 #ifndef COLOR_TOUCH_CALIBRATION
-  #define COLOR_TOUCH_CALIBRATION COLOR_WHITE
+  #define COLOR_TOUCH_CALIBRATION COLOR_AQUA
 #endif
 
 #ifndef COLOR_KILL_SCREEN_BG
   #define COLOR_KILL_SCREEN_BG    COLOR_MAROON
 #endif
 #ifndef COLOR_KILL_SCREEN_TEXT
-  #define COLOR_KILL_SCREEN_TEXT  COLOR_WHITE
-#endif
+  #define COLOR_KILL_SCREEN_TEXT  COLOR_AQUA
+#endif	  
+

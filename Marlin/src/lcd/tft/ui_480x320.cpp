@@ -76,11 +76,13 @@ void MarlinUI::tft_idle() {
       #define BOOT_LOGO_H TFT_HEIGHT
       #define SITE_URL_Y (TFT_HEIGHT - 90)
     #endif
-    tft.add_image((TFT_WIDTH - BOOT_LOGO_W) / 2, (TFT_HEIGHT - BOOT_LOGO_H) / 2, imgBootScreen);
-    #ifdef WEBSITE_URL
-      tft_string.set(WEBSITE_URL);
-      tft.add_text(tft_string.center(TFT_WIDTH), SITE_URL_Y, COLOR_WEBSITE_URL, tft_string);
-    #endif
+	
+tft.add_image(130, 65, imgBootScreen);											 
+  //  tft.add_image((TFT_WIDTH - BOOT_LOGO_W) / 2, (TFT_HEIGHT - BOOT_LOGO_H) / 2, imgBootScreen);
+   // #ifdef WEBSITE_URL
+    //  tft_string.set(WEBSITE_URL);
+    //  tft.add_text(tft_string.center(TFT_WIDTH), SITE_URL_Y, COLOR_WEBSITE_URL, tft_string);
+   // #endif
 
     tft.queue.sync();
   }
