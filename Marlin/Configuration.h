@@ -607,9 +607,9 @@
     #define DEFAULT_Ki_LIST {   0.41,   0.41 }
     #define DEFAULT_Kd_LIST { 43.21, 43.21 }
   #else
-    #define DEFAULT_Kp 8.41
-    #define DEFAULT_Ki 0.41
-    #define DEFAULT_Kd 43.21
+    #define DEFAULT_Kp 20.9
+    #define DEFAULT_Ki 2.01
+    #define DEFAULT_Kd 54.4
   #endif
 #endif // PIDTEMP
 
@@ -654,7 +654,7 @@
     // Bluer feito pelo Igor
 #define DEFAULT_bedKp 43.63
 #define DEFAULT_bedKi 8.50
-#define DEFAULT_bedKd 149.24								 
+#define DEFAULT_bedKd 149.24
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -950,10 +950,10 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.3, 80.3, 400, 412 }     //Bluer V1 
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.3, 80.3, 400, 412 }     //Bluer V1
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.3, 80.3, 400, 405 }     //Bluer V2 4xTMC2208
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160.6, 160.6, 400, 412 }    //Bluer V2  2xTMC2225	
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160.6, 160.6, 800, 824 }	 //Bluer 4xTMC2225																											   
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160.6, 160.6, 400, 412 }    //Bluer V2  2xTMC2225
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160.6, 160.6, 800, 824 }	 //Bluer 4xTMC2225
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
@@ -1026,7 +1026,7 @@
  *   https://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html
  */
 #if DISABLED(CLASSIC_JERK)
-  #define JUNCTION_DEVIATION_MM 0.3 // (mm) Distance from real junction edge
+  #define JUNCTION_DEVIATION_MM 0.13 // (mm) Distance from real junction edge
   #define JD_HANDLE_SMALL_SEGMENTS    // Use curvature estimation instead of just the junction angle
                                       // for small segments (< 1mm) with large junction angles (> 135°).
 #endif
@@ -1210,7 +1210,7 @@
  */
 #define NOZZLE_TO_PROBE_OFFSET { 0, 0, 0 }
 //#define NOZZLE_TO_PROBE_OFFSET { 42, 0, -1.8 }
-//#define NOZZLE_TO_PROBE_OFFSET { -10, 20, -2.08}											   
+//#define NOZZLE_TO_PROBE_OFFSET { -10, 20, -2.08}
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1700,7 +1700,7 @@
   //=================================== Mesh ==================================
   //===========================================================================
 
-  #define MESH_INSET 10          // Set Mesh bounds as an inset region of the bed
+  #define MESH_INSET 15          // Set Mesh bounds as an inset region of the bed
   #define GRID_MAX_POINTS_X 4    // Don't use more than 7 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
@@ -1715,7 +1715,7 @@
 #define LCD_BED_LEVELING
 
 #if ENABLED(LCD_BED_LEVELING)
-  #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
+  #define MESH_EDIT_Z_STEP  0.02  // (mm) Step size while manually probing Z axis.
   #define LCD_PROBE_Z_RANGE 4     // (mm) Z Range centered on Z_MIN_POS for LCD Z adjustment
   #define MESH_EDIT_MENU        // Add a menu to edit mesh points
 #endif
@@ -1916,7 +1916,7 @@
 #define PREHEAT_3_TEMP_HOTEND 230
 #define PREHEAT_3_TEMP_BED    100
 #define PREHEAT_3_TEMP_CHAMBER 35
-#define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255													   
+#define PREHEAT_3_FAN_SPEED     0 // Value from 0 to 255
 /**
  * Nozzle Park
  *

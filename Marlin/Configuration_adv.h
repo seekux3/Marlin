@@ -936,7 +936,7 @@
   // Define positions for probe points.
 //#define TRAMMING_POINT_XY { {  20, 20 }, { 180,  20 }, { 180, 180 }, { 20, 180 } }
   //#define TRAMMING_POINT_XY { {  45, 45 }, { 190,  45 }, { 190, 190 }, { 45, 190 } }
-  //#define TRAMMING_POINT_XY { {  30, 30 }, { 205, 30 }, { 205, 205 }, { 30, 205 } }											  
+  //#define TRAMMING_POINT_XY { {  30, 30 }, { 205, 30 }, { 205, 205 }, { 30, 205 } }
   // Define position names for probe points.
   #define TRAMMING_POINT_NAME_1 "Front-Left"
   #define TRAMMING_POINT_NAME_2 "Front-Right"
@@ -1910,7 +1910,7 @@
  *
  * See https://marlinfw.org/docs/features/lin_advance.html for full instructions.
  */
-#define LIN_ADVANCE
+//#define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
   #define LIN_ADVANCE_K 0.00    // Unit: mm compression per 1mm/s extruder speed
