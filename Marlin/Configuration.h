@@ -1093,7 +1093,7 @@
  * Z Servo Probe, such as an endstop switch on a rotating arm.
  */
 #define Z_PROBE_SERVO_NR 0       // Defaults to SERVO 0 connector.
-#define Z_SERVO_ANGLES { 200, 127 } // Z Servo Deploy and Stow angles
+#define Z_SERVO_ANGLES { 200, 122 } // Z Servo Deploy and Stow angles
 
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
@@ -1201,11 +1201,11 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 23.5, 0.0, -2.75 }
+#define NOZZLE_TO_PROBE_OFFSET { 23.5, 3.0, -2.75 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 5
+#define PROBING_MARGIN 10
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
@@ -1817,7 +1817,7 @@
   // Input all length measurements here:
   #define XY_DIAG_AC 70.36
   #define XY_DIAG_BD 70.67
-  #define XY_SIDE_AD 200
+  #define XY_SIDE_AD 50
 
   // Or, set the default skew factors directly here
   // to override the above measurements:
@@ -1829,7 +1829,7 @@
     #define XZ_DIAG_BD 70.59
     #define YZ_DIAG_AC 70.66
     #define YZ_DIAG_BD 70.58
-    #define YZ_SIDE_AD 200
+    #define YZ_SIDE_AD 50
     // #define XZ_SKEW_FACTOR 0.0
     // #define YZ_SKEW_FACTOR 0.0
   #endif
@@ -2831,10 +2831,14 @@
 
   #define TOUCH_SCREEN_CALIBRATION
 
-  #define TOUCH_CALIBRATION_X 12316
-  #define TOUCH_CALIBRATION_Y -9203
-  #define TOUCH_OFFSET_X        -35
-  #define TOUCH_OFFSET_Y        264
+// TOUCH_CALIBRATION_X 11882
+// TOUCH_CALIBRATION_Y -8454
+// TOUCH_OFFSET_X -36
+// TOUCH_OFFSET_Y 247
+  #define TOUCH_CALIBRATION_X 11882
+  #define TOUCH_CALIBRATION_Y -8454
+  #define TOUCH_OFFSET_X        -36
+  #define TOUCH_OFFSET_Y        247
   #define TOUCH_ORIENTATION TOUCH_LANDSCAPE
 
   #if BOTH(TOUCH_SCREEN_CALIBRATION, EEPROM_SETTINGS)
