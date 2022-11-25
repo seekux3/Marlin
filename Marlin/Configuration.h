@@ -1093,7 +1093,7 @@
  * Z Servo Probe, such as an endstop switch on a rotating arm.
  */
 #define Z_PROBE_SERVO_NR 0       // Defaults to SERVO 0 connector.
-#define Z_SERVO_ANGLES { 200, 122 } // Z Servo Deploy and Stow angles
+#define Z_SERVO_ANGLES { 200, 127 } // Z Servo Deploy and Stow angles
 
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
@@ -1201,7 +1201,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 23.5, 3.0, -2.75 }
+#define NOZZLE_TO_PROBE_OFFSET { 23.5, 3.0, -3.30 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1283,7 +1283,7 @@
 #define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 #define Z_AFTER_PROBING           5   // Z position after probing is done
 
-#define Z_PROBE_LOW_POINT          -1 // Farthest distance below the trigger-point to go before stopping
+#define Z_PROBE_LOW_POINT          -5 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
 #define Z_PROBE_OFFSET_RANGE_MIN -10
@@ -2831,10 +2831,6 @@
 
   #define TOUCH_SCREEN_CALIBRATION
 
-// TOUCH_CALIBRATION_X 11882
-// TOUCH_CALIBRATION_Y -8454
-// TOUCH_OFFSET_X -36
-// TOUCH_OFFSET_Y 247
   #define TOUCH_CALIBRATION_X 11882
   #define TOUCH_CALIBRATION_Y -8454
   #define TOUCH_OFFSET_X        -36
